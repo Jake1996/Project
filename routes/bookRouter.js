@@ -10,7 +10,7 @@ bookRouter.route('/')
 //Get all the books
 .get(function(req,res,next){
 
-  books.find({}, function(err, book){
+  books.find({"userkey": "OneUser"}, function(err, book){
       if(err){
         throw err;
       }
